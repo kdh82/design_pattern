@@ -1,14 +1,16 @@
 package design_pattern.ch03;
 
+import org.apache.log4j.Logger;
 import org.junit.Test;
 
 import design_pattern.ch03.TimeReminder;
 
 public class OCPTest {
-
+	private static final Logger log = Logger.getLogger(OCPTest.class);
+	
 	@Test
 	public void testFakeTimeProvider() {
-		System.out.println("testFakeTimeProvider()");
+		log.debug("testFakeTimeProvider()");
 		TimeProvider tProvSub = new FakeTimeProvider();
 		tProvSub.setHours(23);
 		
@@ -20,7 +22,7 @@ public class OCPTest {
 
 	@Test
 	public void testRealTimeProvider() {
-		System.out.println("testRealTimeProvider()");
+		log.debug("testRealTimeProvider()");
 		TimeProvider tProvSub = new RealTimeProvider();
 		
 		TimeReminder tr = new TimeReminder();

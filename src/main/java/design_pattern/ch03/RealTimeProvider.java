@@ -12,7 +12,7 @@ public class RealTimeProvider implements TimeProvider {
 
 	@Override
 	public void setHours(int hour) {
-		cal.set(Calendar.HOUR_OF_DAY, hour);
+//		cal.set(Calendar.HOUR_OF_DAY, hour);
 	}
 
 	@Override
